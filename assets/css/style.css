@@ -1,0 +1,68 @@
+section .ball1, section .ball2, section .ball3 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+section .ball1 {
+  -webkit-animation: bewegung infinite 1.3s ease-in-out;
+          animation: bewegung infinite 1.3s ease-in-out;
+  background-color: red;
+}
+
+section .ball2 {
+  -webkit-animation: bewegung infinite 1.6s ease-in-out;
+          animation: bewegung infinite 1.6s ease-in-out;
+  top: 200px;
+  background-color: blue;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+section .ball3 {
+  -webkit-animation: bewegung infinite 1.8s ease-in-out;
+          animation: bewegung infinite 1.8s ease-in-out;
+  top: 400px;
+  background-color: yellow;
+}
+
+@-webkit-keyframes bewegung {
+  0%, 100% {
+    left: 0%;
+  }
+  75% {
+    left: 90%;
+  }
+}
+
+@keyframes bewegung {
+  0%, 100% {
+    left: 0%;
+  }
+  75% {
+    left: 90%;
+  }
+}
+
+div:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+/*# sourceMappingURL=style.css.map */

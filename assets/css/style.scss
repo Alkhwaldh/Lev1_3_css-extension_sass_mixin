@@ -1,0 +1,47 @@
+@import "variable";
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+section{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .ball1{
+       @extend %ball1-setting;
+    }
+    .ball2{
+        @extend %ball2-setting;
+    }
+    .ball3{
+        animation: bewegung infinite 1.8s ease-in-out ;
+        @extend %ball-shape ;
+        top: 400px;
+        background-color: $ball3-color;
+    }
+}
+
+@keyframes bewegung {
+
+    0%, 100%{
+        
+        left:0%;
+    }
+    
+    75% {
+        left:90%;
+        
+    }
+}
+
+div:hover {
+    animation-play-state: paused;
+}
+

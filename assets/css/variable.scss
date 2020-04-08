@@ -1,0 +1,23 @@
+$ball1-color:red;
+$ball2-color:blue;
+$ball3-color:yellow;
+
+
+%ball-shape {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+%ball1-setting{
+    animation: bewegung infinite 1.3s ease-in-out ;
+    @extend %ball-shape ;
+    background-color: $ball1-color;
+}
+%ball2-setting{
+    animation: bewegung infinite 1.6s ease-in-out;
+    @extend %ball-shape ;
+    top: 200px;
+    background-color: $ball2-color;
+}
